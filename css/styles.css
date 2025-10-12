@@ -286,6 +286,13 @@ main > section:nth-child(2) footer {
   gap: 16px
 }
 
+@media (width >= 640px) {
+  main > section:nth-child(2) footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
 /* Feature Cards */
 /* article {
   background-color: var(--card-bg);
