@@ -44,8 +44,8 @@
 
             <p>Explora miles de oportunidades en el sector tecnológico.</p>
 
-            <form role="search">
-                <div>
+            <form id="empleos-search-form" role="search">
+                <div class="search-bar">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none" 
                 stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round" 
                 class="icon icon-tabler icons-tabler-outline icon-tabler-search">
@@ -53,27 +53,89 @@
                 <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" />
                 </svg>
 
-                <input required type ="text" placeholder="Buscar trabajos por título, habilidad o empresa">
+                <input name="search" id="empleos-search-input" required type ="text" placeholder="Buscar trabajos, empresa o habilidades">
         
             </div>  
 
             <div class="search-filters">
                 <select name="technology" id="filter-technology">
                     <option value="">Tecnología</option>
+                    <optgroup label="Tecnologias populares">
                     <option value="javascript">JavaScript</option>
                     <option value="python">Python</option>
-                    <option value="java">Java</option>
                     <option value="react">React</option>
                     <option value="nodejs">Node.js</option>
+                 </optgroup>
+                 <option value="java">Java</option>
+                 <hr />
+                 <option value="csharp">C#</option>
+                 <option value="c">C</option>
+                 <option value="c++">C++</option>
+                 <hr />
+                 <option value="ruby">Ruby</option>
+                 <option value="php">PHP</option>
 
-                </select>
+                 </select>
 
+                 <select name="location" id="filter-location">
+                    <option value="">Ubicación</option>
+                    <option value="remoto">Remoto</option>
+                    <option value="latam">Latam</option>
+                    <option value="barranquilla">Barranquilla</option>
+                    <option value="usa">Usa</option>
+                    <option value="europa">Europa</option>
+                 </select>
+
+                 <select name="experience-level" id="filter-experience-level">
+                    <option value="">Nivel de experiencia</option>
+                    <option value="junior">Junior</option>
+                    <option value="mid">Mid-level</option>
+                    <option value="senior">Senior</option>
+                    <option value="lead">Lead</option>
+
+               </select>
+            </div> 
             </form>
+            
+            <span id="filter-selected-value"></span>
         </section>
 
         <section>
-            <header>
+            <h2>Resultados de búsqueda</h2>
 
-               
-                
-            </header>
+            <div class="jobs-listings">
+
+                <!--Aqui se insertan los empleos dinámicamente-->
+            </div>
+
+            <nav class="pagination">
+                <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M15 6l-6 6l6 6" />
+            </svg></a>
+            <a class="is-active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+              <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+             <path d="M9 6l6 6l-6 6" />
+            </svg></a>
+            </nav>
+        </section>    
+
+    </main> 
+    
+    <footer style="padding-bottom: 2000px;">
+        <small>&copy; 2025 DevJobs. Todos los derechos reservados</small>
+
+    </footer>
+</body>
+
+</html>
+
+            
