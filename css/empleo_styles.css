@@ -503,9 +503,13 @@ article {
   }
 }
 
-#boton-importante {
-  background: #09f;
 
+
+.button-apply-job {
+  &.is-applied {
+    background: #4caf50;
+    pointer-events: none;
+  }
 }
 
 
