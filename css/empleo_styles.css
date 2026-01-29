@@ -505,7 +505,8 @@ article {
 
 
 
-.button-apply-job {
+.button-apply-job
+/*.jobs-listings*/ {
   &.is-applied {
     background: #4caf50;
     pointer-events: none;
